@@ -110,3 +110,13 @@ body {
   border-radius: 75px;
 }
 
+ia (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  
