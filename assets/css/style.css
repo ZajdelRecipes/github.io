@@ -39,6 +39,7 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
+  padding-bottom:9px;
   cursor: pointer;
 }
 
