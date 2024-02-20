@@ -26,13 +26,6 @@ body {
 .topnav a.active {
   background-color: #007bff;
   color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-logo {
   font-size: 20px;
   text-decoration: none;
   font-weight: 600;
@@ -40,6 +33,10 @@ logo {
   color: #FFEA00;
   margin-bottom:15px;
   cursor: pointer;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 a {
