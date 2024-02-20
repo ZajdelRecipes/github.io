@@ -30,6 +30,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-style: italic;
+  font-stretch: expanded;
   color: #FFEA00;
   margin-bottom:15px;
   cursor: pointer;
