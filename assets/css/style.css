@@ -28,9 +28,8 @@ body {
   color: white;
   font-size: 20px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   font-style: italic;
-  font-stretch: expanded;
   color: #FFEA00;
   margin-bottom:15px;
   cursor: pointer;
