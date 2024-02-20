@@ -42,11 +42,11 @@ body {
 }
 
 a {
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
   color: #000;
-  margin-bottom:20px;
+  padding-bottom:9px;
   cursor: pointer;
 }
 
