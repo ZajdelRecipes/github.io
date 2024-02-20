@@ -33,9 +33,10 @@ body {
 }
 
 .logo {
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
   font-weight: 600;
+  font-style: italic;
   color: #FFEA00;
   margin-bottom:15px;
   cursor: pointer;
