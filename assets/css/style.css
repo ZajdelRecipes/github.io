@@ -32,7 +32,8 @@ body {
   font-weight: bold;
   font-style: italic;
   color: #FFEA00;
-  margin-bottom:15px;
+  margin-bottom:9px;
+  padding-left: 9px;
   cursor: pointer;
 }
 
