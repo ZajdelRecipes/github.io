@@ -4,6 +4,24 @@ var recipeList =
 {"title":"Baked Ziti","url":"/baked-ziti.html"}
 ]
 
+function loadRecipes() {
+  var html = "";
+
+  for(var i=0; i<recipeList.length; i++) {
+    var recipe = recipeList[i];
+
+     html +=  
+       "<a class='link' + 
+	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
+	"</a>" +
+	"<br/>";
+  }
+
+  document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'>Found " + recipes.length + " matching recipes</p>";
+document.getElementById("recipe-list").innerHTML = html;
+
+}
+
 var recipes = [];
 
 function search() {
