@@ -55,18 +55,19 @@ function search() {
 }
 
 function createResultsHTML(recipes) {
-	var html = "<ul class='none'>";
+  var html = "<ul class='none'>";
 
-	for(var i=0; i<recipes.length; i++) {
-		var recipee = recipes[i];
+  for(var i=0; i<recipes.length; i++) {
+    var recipe = recipes[i];
 
-		html +=
-			"<li><a class='menu' href=" + "/assets/recipes/" + recipe.url + "><span style='font-size: 18px;'>" + recipe.title + "</span></a></li>"
-	}
+     html +=  
+       "<a class='link' + 
+	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
+	"</a>" +
+	"<br/>";
+  }
 
-	html += "</ul>";
-
-	return html;
+  return html;
 }
 
 var searchText = document.getElementById("searchText");
