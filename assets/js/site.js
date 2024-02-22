@@ -11,7 +11,7 @@ function loadRecipes() {
     var recipe = recipeList[i];
 
      html +=  
-       "<a class='link' + 
+       "<a class='link' " + 
 	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
 	"</a>" +
 	"<br/>";
