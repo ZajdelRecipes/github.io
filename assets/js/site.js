@@ -77,7 +77,7 @@ function createResultsHTML(recipes) {
     var recipe = recipes[i];
 
      html +=  
-       "<a class='link' + 
+       "<a class='link' " + 
 	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
 	"</a>" +
 	"<br/>";
