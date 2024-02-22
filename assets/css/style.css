@@ -6,7 +6,6 @@ body {
 
 .topnav {
   overflow: hidden;
-/*  background-color: #007bff; */
   background-color: #000;
 }
 
@@ -25,7 +24,6 @@ body {
 }
 
 .topnav a.active {
-/*  background-color: #007bff; */
   background-color: #000;
   font-size: 20px;
   text-decoration: none;
@@ -39,6 +37,7 @@ body {
 
 .topnav .icon {
   display: none;
+  font-size: 2em;
 }
 
 a {
