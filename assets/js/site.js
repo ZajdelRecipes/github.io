@@ -41,16 +41,14 @@ function search() {
 		}
 	}
 
-	document.getElementById("content-page").style.display = "none";
-
 	if(recipes.length <= 0) {
-		document.getElementById("search-results").innerHTML = "<p style='font-size: 20px;'> No Recipes were found based on your search.</p>";
-		document.getElementById("search-list").innerHTML = "";
+		document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'> No Recipes were found based on your search.</p>";
+		document.getElementById("recipe-list").innerHTML = "";
 
 	} else {
-		document.getElementById("search-results").innerHTML = "<p style='font-size: 20px;'>Found " + recipes.length + " matching recipes</p>";
+		document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'>Found " + recipes.length + " matching recipes</p>";
 		var html = createResultsHTML(recipes);
-		document.getElementById("search-list").innerHTML = html;
+		document.getElementById("recipe-list").innerHTML = html;
 	}
 }
 
