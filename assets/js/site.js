@@ -12,7 +12,8 @@ function loadRecipes() {
 
      html +=  
        "<a class='link' " + 
-	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
+	"href='/assets/recipes/" + recipe.url + "'>" + 
+	"<span stype='font-size:20px;padding-bottom:9px;'>" + recipe.title + "</span>" +
 	"</a>" +
 	"<br/>";
   }
