@@ -17,57 +17,53 @@ function loadRecipes() {
 	"<br/>";
   }
 
-  document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'>Found " + recipes.length + " matching recipes</p>";
-document.getElementById("recipe-list").innerHTML = html;
-
+  document.getElementById("recipe-list").innerHTML = html;
 }
 
 var recipes = [];
 
 function search() {
   var input = document.getElementById("searchText").value;
-	var tokens = input.split(" ");
-	input = "";
+  var tokens = input.split(" ");
+  input = "";
 
   var stopWords = ["and", "or", "i", "the", "of", "a", "as", "at", "is", "are", "to", "if"];
 
-	for(var x=0; x<tokens.length; x++) {
-		var word = tokens[x].toLowerCase();
+  for(var x=0; x<tokens.length; x++) {
+    var word = tokens[x].toLowerCase();
 
-		for (var y=0; y<stopWords.length; y++) {
-			if(tokens[x] == stopWords[y]) {
-				word = "";
-				break;
-			}
-		}
+    for (var y=0; y<stopWords.length; y++) {
+      if(tokens[x] == stopWords[y]) {
+        word = "";
+        break;
+      }
+    }
 
-		if(word != "") {
-			input += tokens[x] + "|";
-		}
-	}
+    if(word != "") {
+      input += tokens[x] + "|";
+    }
+  }
 
-	var cleanedInput = input.substring(0, input.length-1);
+  var cleanedInput = input.substring(0, input.length-1);
 
-	recipes = [];
+  recipes = [];
 
-	for(var i=0; i<recipeList.length; i++) {
-		var recipe = recipeList[i];
-		var reg = new RegExp(cleanedInput, 'gi');
+  for(var i=0; i<recipeList.length; i++) {
+    var recipe = recipeList[i];
+    var reg = new RegExp(cleanedInput, 'gi');
 
-		if(reg.test(recipe.title)) {
-			recipes.push(recipe);
-		}
-	}
+    if(reg.test(recipe.title)) {
+      recipes.push(recipe);
+    }
+  }
 
-	if(recipes.length <= 0) {
-		document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'> No Recipes were found based on your search.</p>";
-		document.getElementById("recipe-list").innerHTML = "";
+  if(recipes.length <= 0) {
+    document.getElementById("recipe-list").innerHTML = "";
 
-	} else {
-		document.getElementById("recipe-results").innerHTML = "<p style='font-size: 20px;'>Found " + recipes.length + " matching recipes</p>";
-		var html = createResultsHTML(recipes);
-		document.getElementById("recipe-list").innerHTML = html;
-	}
+  } else {
+    var html = createResultsHTML(recipes);
+    document.getElementById("recipe-list").innerHTML = html;
+  }
 }
 
 function createResultsHTML(recipes) {
