@@ -53,7 +53,7 @@ function search() {
 }
 
 function createResultsHTML(recipes) {
-  var html = "<ul class='none'>";
+  var html = "";
 
   for(var i=0; i<recipes.length; i++) {
     var recipe = recipes[i];
