@@ -19,7 +19,7 @@ function getRecipes() {
   for(var i=0; i<recipeList.length; i++) {
     var recipe = recipeList[i];
 
-     html = buildRecipeLink(recipe);
+     html += buildRecipeLink(recipe);
   }
 
   document.getElementById("recipe-list").innerHTML = html;
@@ -29,7 +29,7 @@ function buildRecipeLink(recipe) {
   var html = 
     "<a class='link' " + 
     "href='/assets/recipes/" + recipe.url + "'>" + 
-    "<span stype='font-size:24px;padding-bottom:12px;'>" + recipe.title + "</span>" +
+    "<span style='font-size:24px;padding-bottom:12px;'>" + recipe.title + "</span>" +
     "</a>" +
     "<br/>";
 
