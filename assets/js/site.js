@@ -14,7 +14,7 @@ function menuFunction() {
 }
 
 function getRecipes(recipes) {
-  var html = "";
+  var html = "<p>";
 
   for(var i=0; i<recipes.length; i++) {
     var recipe = recipes[i];
@@ -22,6 +22,8 @@ function getRecipes(recipes) {
      html += buildRecipeLink(recipe);
   }
 
+  html += "</p>";
+  
   if(recipes.length <= 0) {
     document.getElementById("recipe-list").innerHTML = "No Recipes found for your search";
 
