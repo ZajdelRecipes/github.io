@@ -19,7 +19,7 @@ function getRecipes(recipes) {
   html += "</p>";
   
   if(recipes.length <= 0) {
-    document.getElementById("recipe-list").innerHTML = "No Recipes found for your search";
+    document.getElementById("recipe-list").innerHTML = "<p>No Recipes found</p>";
 
   } else {
     document.getElementById("recipe-list").innerHTML = html;
