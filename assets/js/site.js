@@ -13,11 +13,11 @@ function menuFunction() {
   }
 }
 
-function getRecipes() {
+function getRecipes(recipes) {
   var html = "";
 
-  for(var i=0; i<recipeList.length; i++) {
-    var recipe = recipeList[i];
+  for(var i=0; i<recipes.length; i++) {
+    var recipe = recipes[i];
 
      html += buildRecipeLink(recipe);
   }
