@@ -46,6 +46,32 @@ body {
   cursor: pointer;
 }
 
+input[type=text] {
+  padding: 9px;
+  font-size: 18px;
+  border: 1px solid grey;
+  float: left;
+  max-width:200px;
+  background: #fff;
+}
+
+button {
+  float: left;
+  max-width: 35px;
+  height: 40px;
+  padding: 9px;
+  background: #000;
+  color: white;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+button:hover {
+
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
