@@ -4,21 +4,36 @@ var recipeList =
 {"title":"Baked Ziti","url":"/baked-ziti.html"}
 ]
 
-function loadRecipes() {
+function menuFunction() {
+  var x = document.getElementById("recipeTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function getRecipes() {
   var html = "";
 
   for(var i=0; i<recipeList.length; i++) {
     var recipe = recipeList[i];
 
-     html +=  
-       "<a class='link' " + 
-	"href='/assets/recipes/" + recipe.url + "'>" + 
-	"<span stype='font-size:20px;padding-bottom:12px;'>" + recipe.title + "</span>" +
-	"</a>" +
-	"<br/>";
+     html = buildRecipeLink(recipe);
   }
 
   document.getElementById("recipe-list").innerHTML = html;
+}
+
+function buildRecipeLink(recipe) {
+  var html = 
+    "<a class='link' " + 
+    "href='/assets/recipes/" + recipe.url + "'>" + 
+    "<span stype='font-size:24px;padding-bottom:12px;'>" + recipe.title + "</span>" +
+    "</a>" +
+    "<br/>";
+
+  return html;
 }
 
 var recipes = [];
@@ -62,25 +77,9 @@ function search() {
     document.getElementById("recipe-list").innerHTML = "";
 
   } else {
-    var html = createResultsHTML(recipes);
+    var html = getRecipes(recipes);
     document.getElementById("recipe-list").innerHTML = html;
   }
-}
-
-function createResultsHTML(recipes) {
-  var html = "";
-
-  for(var i=0; i<recipes.length; i++) {
-    var recipe = recipes[i];
-
-     html +=  
-       "<a class='link' " + 
-	"href='/assets/recipes/" + recipe.url + "'>" + recipe.title + 
-	"</a>" +
-	"<br/>";
-  }
-
-  return html;
 }
 
 var searchText = document.getElementById("searchText");
@@ -91,12 +90,3 @@ searchText.addEventListener("keyup", function(event) {
 		document.getElementById("searchBtn").click();
 	}
 });
-
-function menuFunction() {
-  var x = document.getElementById("recipeTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
