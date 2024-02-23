@@ -22,7 +22,12 @@ function getRecipes(recipes) {
      html += buildRecipeLink(recipe);
   }
 
-  document.getElementById("recipe-list").innerHTML = html;
+  if(recipes.length <= 0) {
+    document.getElementById("recipe-list").innerHTML = "No Recipes found for your search";
+
+  } else {
+    document.getElementById("recipe-list").innerHTML = html;
+  }
 }
 
 function buildRecipeLink(recipe) {
@@ -39,6 +44,7 @@ function buildRecipeLink(recipe) {
 function search() {
   var input = document.getElementById("search").value;
   var tokens = input.split(" ");
+
   input = "";
 
   var stopWords = ["and", "or", "i", "the", "of", "a", "as", "at", "is", "are", "to", "if"];
@@ -59,7 +65,6 @@ function search() {
   }
 
   var cleanedInput = input.substring(0, input.length-1);
-alert(cleanedInput);
 
   recipes = [];
 
@@ -71,12 +76,6 @@ alert(cleanedInput);
       recipes.push(recipe);
     }
   }
-alert(recipes.length);
 
-  if(recipes.length <= 0) {
-    document.getElementById("recipe-list").innerHTML = "No Recipes found for your search";
-
-  } else {
-    getRecipes(recipes);
-  }
+  getRecipes(recipes);
 }
