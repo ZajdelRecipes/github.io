@@ -36,8 +36,6 @@ function buildRecipeLink(recipe) {
   return html;
 }
 
-var recipes = [];
-
 function search() {
   var input = document.getElementById("search").value;
   var tokens = input.split(" ");
@@ -61,6 +59,7 @@ function search() {
   }
 
   var cleanedInput = input.substring(0, input.length-1);
+alert(cleanedInput);
 
   recipes = [];
 
@@ -72,12 +71,12 @@ function search() {
       recipes.push(recipe);
     }
   }
+alert(recipes.length);
 
   if(recipes.length <= 0) {
-    document.getElementById("recipe-list").innerHTML = "";
+    document.getElementById("recipe-list").innerHTML = "No Recipes found for your search";
 
   } else {
-    var html = getRecipes(recipes);
-    document.getElementById("recipe-list").innerHTML = html;
+    getRecipes(recipes);
   }
 }
