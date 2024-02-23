@@ -39,7 +39,7 @@ function buildRecipeLink(recipe) {
 var recipes = [];
 
 function search() {
-  var input = document.getElementById("searchText").value;
+  var input = document.getElementById("search").value;
   var tokens = input.split(" ");
   input = "";
 
@@ -81,12 +81,3 @@ function search() {
     document.getElementById("recipe-list").innerHTML = html;
   }
 }
-
-var searchText = document.getElementById("searchText");
-
-searchText.addEventListener("keyup", function(event) {
-	if(event.keyCode === 13) {
-		event.preventDefault();
-		document.getElementById("searchBtn").click();
-	}
-});
