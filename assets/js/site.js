@@ -70,7 +70,10 @@ function search() {
 
     if(reg.test(recipe.title)) {
       recipes.push(recipe);
-    }
+
+		} else if(reg.test(recipe.keywords)) {
+			recipes.push(recipe);
+		}
   }
 
   getRecipes(recipes);
