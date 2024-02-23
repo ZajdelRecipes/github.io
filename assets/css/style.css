@@ -40,6 +40,11 @@ body {
   font-size: 2em;
 }
 
+.general-padding {
+  padding-left:16px;
+  padding-right:16px;"
+}
+
 .link {
   text-decoration: none;
   color: #000;
