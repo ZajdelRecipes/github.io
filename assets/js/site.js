@@ -28,11 +28,10 @@ function getRecipes(recipes) {
 
 function buildRecipeLink(recipe) {
   var html = 
-    "<p>" +
     "<a href='/assets/recipes/" + recipe.url + "'>" + 
     recipe.title +
     "</a>" +
-    "</p>" +
+    "<br/>" +
     "<br/>";
 
   return html;
