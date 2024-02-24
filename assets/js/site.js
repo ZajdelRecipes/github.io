@@ -31,7 +31,6 @@ function buildRecipeLink(recipe) {
     "<a href='/assets/recipes/" + recipe.url + "'>" + 
     recipe.title +
     "</a>" +
-    "<br/>" +
     "<br/>";
 
   return html;
