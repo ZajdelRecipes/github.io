@@ -30,7 +30,7 @@ function buildRecipeLink(recipe) {
   var html = 
     "<a class='link' " + 
     "href='/assets/recipes/" + recipe.url + "'>" + 
-    "<span style='font-size:18px;padding-top:9px;padding-bottom:9px;'>" + recipe.title + "</span>" +
+    "<span style='font-size:18px;padding-top:12px;padding-bottom:12px;'>" + recipe.title + "</span>" +
     "</a>" +
     "<br/>";
 
