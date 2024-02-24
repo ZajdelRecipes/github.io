@@ -46,6 +46,9 @@ body {
 }
 
 .link {
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   text-decoration: none;
   color: #000;
   cursor: pointer;
