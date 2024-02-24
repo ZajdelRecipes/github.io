@@ -28,11 +28,11 @@ function getRecipes(recipes) {
 
 function buildRecipeLink(recipe) {
   var html = 
+    "<p style-'margin-top:1px;margin-bottom:12px;'>" +
     "<a href='/assets/recipes/" + recipe.url + "'>" + 
     recipe.title +
     "</a>" +
-    "<span style='margin-bottom:12px;'>&nbsp;</span>" +
-    "br/>";
+    "</p>";
 
   return html;
 }
