@@ -28,7 +28,7 @@ function getRecipes(recipes) {
 
 function buildRecipeLink(recipe) {
   var html = 
-    "<p style-'margin-top:1px;margin-bottom:7px;'>" +
+    "<p style-'font-size:18px;margin-top:1px;margin-bottom:7px;'>" +
     "<a href='/assets/recipes/" + recipe.url + "'>" + 
     recipe.title +
     "</a>" +
